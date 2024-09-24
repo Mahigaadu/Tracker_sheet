@@ -1,0 +1,32 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <h1>Stored Data</h1>
+    <table border="1">
+        <tr>
+            <th>Working Date</th>
+            <th>Work Mode</th>
+            <th>Shift Timings</th>
+            <th>Team Lead</th>
+            <th>Tasks</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.working_date }}</td>
+            <td>{{ item.work_mode }}</td>
+            <td>{{item.shift_timings}}</td>
+            <td>{{ item.team_lead }}</td>
+            <td>{{ item.tasks }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div style="position: absolute; top: 30px; right: 10px;">
+        <a href="{% url 'home'%}" style="text-decoration: none; padding: 7px 14px; background-color: #007BFF; color: white; border-radius: 3px;">Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracker Form</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <h1>Tracker Form</h1>
+    <h3>Hi,When you submit this form, the owner will see your name and email address.</h3>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Working Date 
+        <label for="working_date">Working Date:</label>
+        <input type="date" id="working_date" name="working_date" required><br><br>
+        -->
+        <!-- Work Mode 
+        <label for="work_mode">Work Mode:</label>
+        <select id="work_mode" name="work_mode" required>
+            <option value="work_from_home">Work from Home</option>
+            <option value="work_from_office">Work from Office</option>
+        </select><br><br>
+         -->
+        <!-- Shift Timings 
+        <label for="shift_timings">Shift Timings:</label>
+        <select id="shift_timings" name="shift_timings" required>
+            <option value="9pm to 6am">9pm to 6am</option>
+            <option value="10am to 8pm">10am to 8pm</option>
+        </select><br><br>
+        -->
+
+        <!-- Team Lead 
+        <label for="team_lead">Team Lead:</label>
+        <select id="team_lead" name="team_lead" required>
+            <option value="mahi">Mahi</option>
+            <option value="geetha">Geetha</option>
+            <option value="sita">Sita</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="text" id="other_team_lead" name="other_team_lead" placeholder="Enter team lead name" style="display:none;"><br><br>
+        -->
+        <!-- Tasks 
+        <label for="tasks">Tasks:</label>
+        <input type="text" id="tasks" name="tasks" required><br><br>
+
+        <button type="submit">Submit</button>
+        -->
+        <!--style working date -->
+        <div class="form-group">
+            <label for="working_date">Working Date:</label>
+            <input type="date" id="working_date" name="working_date" required>
+        </div>
+        <!-- style work mode -->
+        <div class="form-group">
+            <label for="work_mode">Work Mode:</label>
+            <select id="work_mode" name="work_mode" required>
+                <option value="work_from_home">Work from Home</option>
+                <option value="work_from_office">Work from Office</option>
+            </select>
+        </div>
+        <!-- style  shift timings-->
+         <div class="form-group">
+            <label for="shift_timings">Shift Timings:</label>
+            <select id="shift_timings" name="shift_timings" required>
+                <option value="9pm to 6am">9pm to 6am</option>
+                <option value="10am to 8pm">10am to 8pm</option>
+            </select>
+         </div>
+        <!--style team lead -->
+        <div class="form-group">
+            <label for="team_lead">Team Lead:</label>
+            <select id="team_lead" name="team_lead" required>
+                <option value="mahi">Mahi</option>
+                <option value="geetha">Geetha</option>
+                <option value="sita">Sita</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="other_team_lead" name="other_team_lead" placeholder="Enter team lead name" style="display:none;">
+        </div>
+
+        <!-- style Task and Button-->
+        <div class="form-group">
+            <label for="tasks">Tasks:</label>
+            <input type="text" id="tasks" name="tasks" required>
+        </div>
+        <!-- style button-->
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+
+
+        
+    </form>
+
+    <script>
+        document.getElementById('team_lead').addEventListener('change', function() {
+            var otherInput = document.getElementById('other_team_lead');
+            if (this.value === 'other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

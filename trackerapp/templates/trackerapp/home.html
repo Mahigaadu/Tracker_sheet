@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>welcome to DAILY TRACKER</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <h1>You are invited to DAILY TRACKER</h1>
+    <h3>An employee daily tracker sheet is a tool used to monitor and record
+        the daily activities, attendance, and productivity of employees.
+    </h3>
+    <div style="position: absolute; center: 10px; right: 10px;">
+        <a href="{% url 'tracker_form'%}" style="text-decoration: none; padding: 7px 14px; background-color: #007BFF; color: white; border-radius: 3px;">Start</a>
+    </div>
+    <div style="position: absolute; center: 10px; left: 10px;">
+        <a href="{% url 'display_data'%}" style="text-decoration: none; padding: 7px 14px; background-color: #007BFF; color: white; border-radius: 3px;">View Response</a>
+    </div>
+</body>
+</html>

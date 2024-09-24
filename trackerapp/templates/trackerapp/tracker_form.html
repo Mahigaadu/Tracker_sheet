@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracker Form</title>
+</head>
+<body>
+    <h1>Tracker Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('id_team_lead').addEventListener('change', function() {
+            var otherInput = document.getElementById('id_other_team_lead');
+            if (this.value === 'other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

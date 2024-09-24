@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <h1>Your response submitted successfully!</h1>
+    <div style="position: absolute; center: 10px; right: 10px;">
+        <a href="{% url 'tracker_form'%}" style="text-decoration: none; padding: 7px 14px; background-color: #007BFF; color: white; border-radius: 3px;">Create another response</a>
+    </div>
+    <div style="position: absolute; center: 10px; left: 10px;">
+        <a href="{% url 'display_data'%}" style="text-decoration: none; padding: 7px 14px; background-color: #007BFF; color: white; border-radius: 3px;">View Response</a>
+    </div>
+</body>
+</html>

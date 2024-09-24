@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edc87d;
+    border-color:#13120f
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.form-group label {
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+.form-group input, .form-group select {
+    width: 200px;
+    padding: 5px;
+}
+.form-group button {
+    margin-left: 160px;
+    padding: 5px 10px;
+}
